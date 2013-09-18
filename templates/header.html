@@ -2,9 +2,25 @@
 
 <!-- The logo section -->
 <div class="span3 logo offset3">
-    <a href="{% url 'home' %}">
-        <div class="image"></div>{% itrans 'Profile' %}
-    </a>
+    <!-- Social -->
+    <ul class="social">
+        <li>
+            <a href="http://www.facebook.com/jesus.anaya.dev" class="poshytip  facebook" title="Become a fan" target="_blank"></a>
+        </li>
+        <li>
+            <a href="https://twitter.com/jesusanayao" class="poshytip twitter" title="Follow our tweets" target="_blank"></a>
+        </li>
+        <li>
+            <a href="https://plus.google.com/114023866873417231088/posts" class="poshytip google" title="Plus in G+" target="_blank"></a>
+        </li>
+        <li>
+            <a href="http://mx.linkedin.com/in/jesusanaya" class="poshytip linkedin" title="Show Linkedin profile" target="_blank"></a>
+        </li>
+        <li>
+            <a href="https://github.com/jesusanaya" class="poshytip github" title="Show Github" target="_blank"></a>
+        </li>
+    </ul>
+    <!-- ENDS Social -->
 </div>
 <!-- The logo section end -->
 <!-- The menu section -->
@@ -26,7 +42,7 @@
             <a href="blog.html" class="blog"></a>
         </li>
         <li {% if page_tag == 'contact' %}class="selected"{% endif %} data-toggle="tooltip" data-placement="bottom" title="Contact">
-            <a href="contact.html" class="contact"></a>
+            <a href="{% url 'contact' %}" class="contact"></a>
         </li>
     </ul>
 </div>

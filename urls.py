@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 from mezzanine.core.views import direct_to_template
+from website.views import SendEmail
 
 
 admin.autodiscover()
@@ -30,6 +31,8 @@ urlpatterns = patterns("",
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     url("^resume/$", TemplateView.as_view(template_name="resume.html"), name="resume"),
+    url("^contact/$", TemplateView.as_view(template_name="contact.html"), name="contact"),
+    url("^send-email/$", SendEmail.as_view(), name="send-email"),
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------

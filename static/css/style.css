@@ -374,6 +374,21 @@ body .container .span12 .row .no-bg{background: none;}
 	.blog p.description textarea{width: 90%}
 	.logo.span3,.retina .logo.span3{border-bottom: 2px solid #FFFFFF;}
 }
+
+.non-decoration {
+    text-decoration: none;
+    color: white;
+}
+
+.non-decoration:hover {
+    color: white;
+}
+
+.code-img {
+    border-radius: 10px;
+    border: 0;
+    padding: 0;
+}
 /* ***************** Media Queries End ***************** */
 
 /* CSS3 Animation */

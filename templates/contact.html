@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load staticfiles  inlinetrans anaya_tags %}
+
+{% block content %}
+<div class="container contact">
+    <div class="row">
+        <div class="span12">
+            <div class="row">
+                {% render_header 'contact' %}
+                <!-- The first block - Top left -->
+                <div class="span3 offset3">
+                    <img src="{% static 'img/code.png' %}" alt="" class="code-img" />
+                </div>
+                <!-- The first block - Top left END -->
+
+                <!-- The third block - Bottom left -->
+                <div class="span3">
+                    <div class="heading small">
+                        <h3>{% itrans 'Information' %}</h3>
+                    </div>
+                    <!-- Description Start -->
+                    <p class="description info">Location <br/>
+                        Mexicali C.P. 21280 <br />
+                        Baja California, Mexico<br />
+                        <br/>
+                        <span>Twitter:</span> @jesusanayao<br/>
+                        <span>E-mail:</span> me@jesusanaya.com<br/>
+                        <span>Skype:</span> jesus.anaya.dev
+                    </p>
+                    <!-- Description END -->
+                </div>
+                <!-- The third block - Bottom left END -->
+                <!-- Form Start -->
+                <form action="{% url 'send-email' %}" method="POST">{% csrf_token %}
+                    <!-- The second block - top left -->
+                    <div class="span3 offset3 no-bg">
+                        <div class="heading small no-bg">
+                            <h3>{% itrans 'Contact Form' %}</h3>
+                        </div>
+                        <p class="description">
+                            {% itrans 'For support, feedback complete the following form:' %}
+                        </p>
+                        <!-- Social icons End -->
+                        <p class="description">
+                            <input type="text" name="name" placeholder="Your name here..." />
+                         </p>
+                         <p class="description">
+                            <input type="text" name="email" placeholder="Your Email here..." />
+                         </p>
+                          <p class="description">
+                            <input type="text" name="url" placeholder="Your Website URL here..." />
+                         </p>
+                    </div>
+                    <!-- The third block - bottom left END -->
+
+                    <!-- The forth block - Bottom right -->
+                    <div class="span3 no-bg">
+                        <p class="description">
+                            <textarea name="message" placeholder="What can we do for you?"></textarea>
+                        </p>
+                        <div class="notification">
+                            <input type="checkbox" name="samsa_notify"> {% itrans 'Select for email confirmation.' %}
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="SUBMIT" />
+                        </div>
+
+                    </div>
+                </form>
+                <!-- Form END -->
+                <!-- The third block - Bottom left END -->
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
