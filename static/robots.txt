@@ -1,0 +1,6 @@
+User-agent: *
+
+Disallow: /static/
+Disallow: /static/media/
+Disallow: /admin/
+Disallow: /send-email/
