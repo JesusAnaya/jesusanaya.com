@@ -25,9 +25,9 @@ $(bgimage).load(function(){
 //bars loading script
 	if($(".container.resume").length > 0){
 		var x = 3;
-		while(x<=4){
+		while(x<=8){
 			var i = 1;
-			while(i<=4){
+			while(i<=8){
 				var the_bar = $('.span3:nth-child('+x+') .skills li:nth-child('+i+') .loading .bar');
 				var the_percent = $('.span3:nth-child('+x+') .skills li:nth-child('+i+') .percent').html();
 				the_bar.animate({
