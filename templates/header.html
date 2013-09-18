@@ -1,0 +1,33 @@
+{% load inlinetrans %}
+
+<!-- The logo section -->
+<div class="span3 logo offset3">
+    <a href="{% url 'home' %}">
+        <div class="image"></div>{% itrans 'Profile' %}
+    </a>
+</div>
+<!-- The logo section end -->
+<!-- The menu section -->
+<div class="menu span3">
+    <ul id="ulmenu"  class="collapse">
+        <li {% if page_tag == 'home' %}class="selected"{% endif %} data-toggle="tooltip" title="Home">
+            <a href="{% url 'home' %}" class="home"></a>
+        </li>
+        <li {% if page_tag == 'resume' %}class="selected"{% endif %} data-placement="bottom" data-toggle="tooltip" title="Resume">
+            <a href="{% url 'resume' %}" class="resume"></a>
+        </li>
+        <li {% if page_tag == 'portfolio' %}class="selected"{% endif %} data-toggle="tooltip" data-placement="bottom" title="Portfolio">
+            <a href="portfolio.html" class="portfolio"></a>
+        </li>
+        <li {% if page_tag == 'services' %}class="selected"{% endif %} data-toggle="tooltip" data-placement="bottom" title="Services">
+            <a href="services.html" class="services"></a>
+        </li>
+        <li {% if page_tag == 'blog' %}class="selected"{% endif %} data-toggle="tooltip" data-placement="bottom" title="Blog">
+            <a href="blog.html" class="blog"></a>
+        </li>
+        <li {% if page_tag == 'contact' %}class="selected"{% endif %} data-toggle="tooltip" data-placement="bottom" title="Contact">
+            <a href="contact.html" class="contact"></a>
+        </li>
+    </ul>
+</div>
+<!-- The menu section end -->

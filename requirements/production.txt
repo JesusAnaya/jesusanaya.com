@@ -1,0 +1,6 @@
+# Include all project modules
+-r project.txt
+
+# Production modules
+gunicorn
+gevent

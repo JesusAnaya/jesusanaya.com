@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load staticfiles gravatar inlinetrans anaya_tags %}
+
+{% block content %}
+<div class="container home">
+    <div class="row">
+        <div class="span12">
+            <div class="row">
+                {% render_header 'home' %}
+                <!-- The first block - Top left -->
+                <div class="span3 offset3 no-bg">
+                    <div class="avatar">
+                        <img src="{% gravatar_for_email 'jesus.anaya.dev@gmail.com' 150 %}" alt="avatar"/>
+                    </div>
+                    <h3 class="name">Jesus Anaya</h3>
+                </div>
+                <!-- The first block - Top left END -->
+
+                <!-- The third block - Bottom left -->
+                <div class="span3 no-bg">
+                    <div class="heading no-bg">
+                        <h3>{% itrans 'About me' %}</h3>
+                        <div class="subtitle">{% itrans 'Something short about me' %}</div>
+                    </div>
+                    <p class="description">
+                        {% itrans 'I’m a dedicated individual aimed to bring the best experience possible to my clients and all of the products that I built. I am aiming to giving 120% of what I’ve got to meet the deadline and bring the hightest quality product to the user and any of his clients.' %}
+                    </p>
+                </div>
+                <!-- The third block - Bottom left END -->
+
+                <!-- The second block - Top right -->
+                <div class="span3 offset3">
+                    <!-- The services circle section -->
+                    <div class="heading">
+                        <h3>{% itrans 'See what you get' %}</h3>
+                        <div class="subtitle">{% itrans 'A preview of my portfolio and services' %}</div>
+                    </div>
+                    <div class="contact split ps">
+                        <div class="the_top">
+                            <a class="folio" href="portfolio.html">
+                                <div class="text">{% itrans 'Portfolio' %}</div>
+                                <img src="{% static 'img/sanico.png' %}" alt="" />
+                            </a>
+                        </div>
+                        <div class="bottom">
+                            <div class="left_part">
+                                <div class="circle-void">
+                                    <img src="{% static 'img/python.png' %}">
+                                </div>
+                            </div>
+                            <div class="right_part">
+                                <h4>Python / Django</h4>
+                                <p>{% itrans 'Web Developer' %}</p>
+                                <a href="services.html">{% itrans 'See all' %}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- The second block - Top right END -->
+
+                <!-- The forth block - Bottom right -->
+                <div class="span3">
+                    <div class="heading">
+                        <a class="ribbon" href="contact.html"></a>
+                        <h3>{% itrans 'Contact' %}</h3>
+                        <div class="subtitle">{% itrans 'A few ways to contact me' %}</div>
+                    </div>
+                    <div class="contact split">
+                        <div class="top">
+                            <span>Twitter:</span> @jesusanayao <br />
+                            <span>Email:</span> me@jesusanaya.com <br />
+                        </div>
+                        <div class="bottom">
+                            <span>{% itrans 'Location:' %}</span><br />
+                            Mexicali C.P. 21280 <br />
+                            Baja California, Mexico<br />
+                        </div>
+                    </div>
+                </div>
+                <!-- The third block - Bottom left END -->
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

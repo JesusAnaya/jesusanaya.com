@@ -1,0 +1,43 @@
+{% load pages_tags mezzanine_tags inlinetrans future staticfiles %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
+    <head>
+        <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+        <meta name="description" content="{% block meta_description %}{% endblock %}">
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+        <link href="{% static 'css/bootstrap-responsive.min.css' %}" rel="stylesheet" media="screen">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" media="screen">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <!-- The main background image -->
+        <img id="bgmimick" src="{% static 'img/background.png' %}" alt="" />
+        <!-- The main background image end -->
+        {% block content %}{% endblock %}
+        <!-- Javascript start -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type='text/javascript' src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+        <!--[if (gte IE 6)&(lte IE 8)]>
+          <script type="text/javascript" src="js/selectivizr-min.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37921949-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+        <!-- Javascript end -->
+    </body>
+</html>

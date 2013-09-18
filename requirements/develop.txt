@@ -1,0 +1,6 @@
+# Include all project modules
+-r project.txt
+
+factory_boy
+django-extensions
+werkzeug

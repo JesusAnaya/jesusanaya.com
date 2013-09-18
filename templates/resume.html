@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load inlinetrans anaya_tags %}
+
+{% block content %}
+<div class="container resume">
+    <div class="row">
+        <div class="span12">
+            <div class="row">
+                {% render_header 'resume' %}
+                <!-- The first block - Top left -->
+                <div class="span3 offset3 no-bg">
+                    <div class="heading small no-bg">
+                        <h3>{% itrans 'Design Skills' %}</h3>
+                    </div>
+                    <ul class="skills">
+                            <li>
+                                <div class="title">C/C++</div>
+                                <div class="percent">80%</div>
+                                <div class="loading">
+                                    <div class="bar"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">Objective-C</div>
+                                <div class="percent">75%</div>
+                                <div class="loading">
+                                    <div class="bar"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">Linux</div>
+                                <div class="percent">70%</div>
+                                <div class="loading">
+                                    <div class="bar"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">Git</div>
+                                <div class="percent">60%</div>
+                                <div class="loading">
+                                    <div class="bar"></div>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+                <!-- The first block - Top left END -->
+
+                <!-- The second block - Top right -->
+                <div class="span3 no-bg">
+                    <div class="heading small no-bg">
+                        <h3>{% itrans 'Coding Skills' %}</h3>
+                    </div>
+                    <ul class="skills">
+                            <li>
+                                <div class="title">Python</div>
+                                <div class="percent">85%</div>
+                                <div class="loading">
+                                    <div class="bar"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">Javascript</div>
+                                <div class="percent">70%</div>
+                                <div class="loading">
+                                    <div class="bar"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">CSS3</div>
+                                <div class="percent">50%</div>
+                                <div class="loading">
+                                    <div class="bar"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">HTML5</div>
+                                <div class="percent">90%</div>
+                                <div class="loading">
+                                    <div class="bar"></div>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+                <!-- The second block - Top right END -->
+
+                <!-- The third block - Bottom left -->
+                <div class="span3 offset3">
+                    <div class="heading small no-bg">
+                        <h3>{% itrans 'Education' %}</h3>
+                    </div>
+                    <div class="info">
+                        <h4><span>2010-2014</span> - {% itrans 'Universidad Politecnica de Baja California' %}</h4>
+                        <p>{% itrans 'Facilis explicari ea netttc. Qmuis diceret at quo, in duo eros qusat Molestie in, voluptua forensibus con.'%}</p>
+                    </div>
+                </div>
+                <!-- The third block - Bottom left END -->
+
+                <!-- The forth block - Bottom right -->
+                <div class="span3">
+                    <div class="heading small no-bg">
+                        <h3>{% itrans 'Experience' %}</h3>
+                    </div>
+                    <div class="info">
+                        <h4><span>2 {% itrans 'Years' %}</span> - {% itrans 'Python Freelancer' %}</h4>
+                        <p>{% itrans 'Molestie in, voluptua forensibus con clusionemque at usudata.Molestie in.' %}</p>
+                        <h4><span>3 {% itrans 'Years' %}</span> - {% itrans 'Video Game Developer' %}</h4>
+                        <p>{% itrans 'Explicari ea nec. Quis diceret at quo, in qusat voluptua forensibus conclusionemque at usudata.' %}</p>
+                    </div>
+                </div>
+                <!-- The third block - Bottom left END -->
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

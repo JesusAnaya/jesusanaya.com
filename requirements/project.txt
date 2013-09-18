@@ -1,0 +1,7 @@
+Django>=1.5.4
+Mezzanine==1.4.13
+mysql-python==1.2.4b4
+south==0.8
+django-grappelli==2.4.6
+django-gravatar
+django-inlinetrans
