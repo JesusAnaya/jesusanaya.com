@@ -1,6 +1,9 @@
 User-agent: *
 
 Disallow: /static/
+Disallow: /static/js/*.js$
+Disallow: /static/css/*.css$
+Disallow: /static/img/*
 Disallow: /static/media/
 Disallow: /admin/
 Disallow: /send-email/
