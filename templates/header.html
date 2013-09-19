@@ -33,7 +33,7 @@
             <a href="{% url 'resume' %}" class="resume"></a>
         </li>
         <li {% if page_tag == 'portfolio' %}class="selected"{% endif %} data-toggle="tooltip" data-placement="bottom" title="Portfolio">
-            <a href="portfolio.html" class="portfolio"></a>
+            <a href="{% url 'portfolio' %}" class="portfolio"></a>
         </li>
         <li {% if page_tag == 'services' %}class="selected"{% endif %} data-toggle="tooltip" data-placement="bottom" title="Services">
             <a href="services.html" class="services"></a>
