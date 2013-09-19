@@ -39,7 +39,7 @@
             <a href="services.html" class="services"></a>
         </li>
         <li {% if page_tag == 'blog' %}class="selected"{% endif %} data-toggle="tooltip" data-placement="bottom" title="Blog">
-            <a href="blog.html" class="blog"></a>
+            <a href="{% url 'blog_post_list' %}" class="blog"></a>
         </li>
         <li {% if page_tag == 'contact' %}class="selected"{% endif %} data-toggle="tooltip" data-placement="bottom" title="Contact">
             <a href="{% url 'contact' %}" class="contact"></a>
