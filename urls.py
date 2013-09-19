@@ -32,6 +32,7 @@ urlpatterns = patterns("",
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     url("^resume/$", TemplateView.as_view(template_name="resume.html"), name="resume"),
     url("^contact/$", TemplateView.as_view(template_name="contact.html"), name="contact"),
+    url("^portfolio/$", TemplateView.as_view(template_name="portfolio.html"), name="portfolio"),
     url("^send-email/$", SendEmail.as_view(), name="send-email"),
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE

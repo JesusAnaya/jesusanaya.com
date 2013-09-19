@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load staticfiles anaya_tags inlinetrans %}
+
+{% block meta_title %}Portfolio of Jesus Anaya{% endblock %}
+
+{% block extra_js %}
+<script type='text/javascript' src="{% static 'js/colorbox-master/jquery.colorbox-min.js' %}"></script>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/colorbox-master/colorbox.css' %}" media="screen">
+{% endblock %}
+
+{% block content %}
+<div class="container portfolio">
+	<div class="row">
+		<div class="span12">
+			<div class="row">
+				{% render_header 'portfolio' %}
+    			<!-- The first block - Top left -->
+	    		<div class="span3 offset3 no-bg">
+	    			<!-- Slide picture&info  Start-->
+	    			<div class="slideshow">
+	    				<img src="{% static 'img/portfolio/garitas.png' %}" alt="" />
+	    				<div class="container">
+		    				<div class="title">Garitas.co</div>
+		    				<div class="subtitle">Python / Django / Backbone.js</div>
+		    			</div>
+		    			<div class="hover_bg">
+		    				<div class="preview">
+		    					<a href="{% static 'img/portfolio/garitas_big.png' %}"><div></div></a>
+		    				</div>
+		    				<div class="share">
+		    					<a href="javascript:void(0)"><div></div></a>
+		    				</div>
+		    				<div class="share_expand">
+		    					<input value="http://garitas.co/" name="share" readonly />
+		    					<a class="copy">{% itrans 'Select' %}</a>
+		    					<ul class="buttons social split">
+		    						<li data-toggle="tooltip" data-placement="bottom" title="Share to facebook"><a href="http://www.facebook.com/sharer.php?u=http://garitas.co/" class="facebook"></a></li>
+		    						<li data-toggle="tooltip" data-placement="bottom" title="Share to Twitter"><a href="http://twitter.com/share?text=An%20Awesome%20Link&amp;url=http://garitas.co/" class="twitter"></a></li>
+		    						<li data-toggle="tooltip" data-placement="bottom" title="Share to Google Plus"><a href="https://plus.google.com/share?url=http%3A%2F%2Fgaritas.co" class="googleplus"></a></li>
+		    					</ul>
+
+		    				</div>
+		    			</div>
+	    			</div>
+	    			<!-- Slide  End-->
+	    		</div>
+	    		<!-- The first block - Top left END -->
+
+	    		<!-- The second block - Top right -->
+	    		<div class="span3 no-bg">
+	    			<!-- Slide picture&info  Start-->
+	    			<div class="slideshow">
+	    				<img src="{% static 'img/portfolio/sanico.png' %}" alt="" />
+	    				<div class="container">
+		    				<div class="title">Sani Medical Tourism</div>
+		    				<div class="subtitle">Django / Mezzanine / Angular.js</div>
+		    			</div>
+		    			<div class="hover_bg">
+		    				<div class="preview">
+		    					<a href="{% static 'img/portfolio/sanico_big.png' %}"><div></div></a>
+		    				</div>
+		    				<div class="share">
+		    					<a href="javascript:void(0);"><div></div></a>
+		    				</div>
+		    				<div class="share_expand">
+		    					<input value="https://sanimedicaltourism.com/" name="share" readonly />
+		    					<a class="copy">Select</a>
+		    					<ul class="buttons social split">
+		    						<li data-toggle="tooltip" data-placement="bottom" title="Share to facebook"><a href="http://www.facebook.com/sharer.php?u=http://sanimedicaltourism.com/" class="facebook"></a></li>
+		    						<li data-toggle="tooltip" data-placement="bottom" title="Share to Twitter"><a href="http://twitter.com/share?text=An%20Awesome%20Link&amp;url=http://sanimedicaltourism.com" class="twitter"></a></li>
+		    						<li data-toggle="tooltip" data-placement="bottom" title="Share to Google Plus"><a href="https://plus.google.com/share?url=http%3A%2F%2Fsanimedicaltourism.com" class="googleplus"></a></li>
+		    					</ul>
+
+		    				</div>
+		    			</div>
+	    			</div>
+	    			<!-- Slide  END-->
+	    		</div>
+	    		<!-- The second block - Top right END -->
+
+	    		<!-- The third block - Bottom left -->
+	    		<div class="span3 offset3 no-bg">
+	    			<!-- Slide picture&info  Start-->
+	    			<div class="slideshow">
+	    				<img src="{% static 'img/portfolio/autostar.png' %}" alt="" />
+	    				<div class="container">
+		    				<div class="title">Autostar.com.mx</div>
+		    				<div class="subtitle">Python / Django / jQuery</div>
+		    			</div>
+		    			<div class="hover_bg">
+		    				<div class="preview">
+		    					<a href="{% static 'img/portfolio/autostar_big.png' %}"><div></div></a>
+		    				</div>
+		    				<div class="share">
+		    					<a href="javascript:void(0)"><div></div></a>
+		    				</div>
+		    				<div class="share_expand">
+		    					<input value="http://autostar.com.mx" name="share" readonly />
+		    					<a class="copy">Select</a>
+		    					<ul class="buttons social split">
+		    						<li data-toggle="tooltip" data-placement="bottom" title="Share to facebook"><a href="http://www.facebook.com/sharer.php?u=http://autostar.com.mx/" class="facebook"></a></li>
+		    						<li data-toggle="tooltip" data-placement="bottom" title="Share to Twitter"><a href="http://twitter.com/share?text=An%20Awesome%20Link&amp;url=http://autostar.com.mx" class="twitter"></a></li>
+		    						<li data-toggle="tooltip" data-placement="bottom" title="Share to Google Plus"><a href="https://plus.google.com/share?url=http%3A%2F%2Fautostar.com.mx" class="googleplus"></a></li>
+		    					</ul>
+
+		    				</div>
+		    			</div>
+	    			</div>
+	    			<!-- Slide  END -->
+	    		</div>
+	    		<!-- The third block - Bottom left END -->
+
+	    		<!-- The forth block - Bottom right -->
+	    		<div class="span3 no-bg">
+	    			<!-- Slide picture&info  Start-->
+	    			<div class="slideshow">
+	    				<img src="{% static 'img/portfolio/tbl.png' %}" alt="" />
+	    				<div class="container">
+		    				<div class="title">The Baseball Legends</div>
+		    				<div class="subtitle">Python / Django / jQuery</div>
+		    			</div>
+		    			<div class="hover_bg">
+		    				<div class="preview">
+		    					<a href="{% static 'img/portfolio/tbl_big.png' %}"><div></div></a>
+		    				</div>
+		    				<div class="share">
+		    					<a href="javascript:void(0)"><div></div></a>
+		    				</div>
+		    				<div class="share_expand">
+		    					<input value="http://thebaseballlegends.com/" name="share" readonly />
+		    					<a class="copy">Select</a>
+		    					<ul class="buttons social split">
+		    						<li data-toggle="tooltip" data-placement="bottom" title="Share to facebook"><a href="http://www.facebook.com/sharer.php?u=http://thebaseballlegends.com/" class="facebook"></a></li>
+		    						<li data-toggle="tooltip" data-placement="bottom" title="Share to Twitter"><a href="http://twitter.com/share?text=An%20Awesome%20Link&amp;url=http://thebaseballlegends.com" class="twitter"></a></li>
+		    						<li data-toggle="tooltip" data-placement="bottom" title="Share to Google Plus"><a href="https://plus.google.com/share?url=http%3A%2F%2Fthebaseballlegends.com" class="googleplus"></a></li>
+		    					</ul>
+
+		    				</div>
+		    			</div>
+	    			</div>
+	    			<!-- Slide end-->
+	    		</div>
+	    		<!-- The third block - Bottom left END -->
+	    		{% include 'footer.html' %}
+		   	</div>
+	   	</div>
+	</div>
+</div>
+{% endblock %}
