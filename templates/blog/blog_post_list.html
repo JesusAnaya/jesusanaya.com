@@ -56,9 +56,7 @@
                                     <h2><a href="{{ blog_post.get_absolute_url }}">{{blog_post.title}}</a></h2>
                                     <div class="subtitle">
                                         <div class="date">Date:&nbsp;
-                                            <a href="#">
-                                                {% with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endwith %}
-                                            </a>
+                                            <a href="">{{ blog_post.publish_date|date:"M d, Y" }}</a>
                                         </div>
                                         <div class="user">Posted by: <a rel="author" href="https://plus.google.com/110417611079207314556?rel=author" target="_blank">{{blog_post.user.username}}</a> </div>
 

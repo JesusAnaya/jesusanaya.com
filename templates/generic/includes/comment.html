@@ -1,0 +1,17 @@
+{% load mezzanine_tags comment_tags rating_tags gravatar %}
+
+<ul>
+{% for comment in comments_for_thread %}
+    <!-- First comment start -->
+    <li class="text">
+        <div class="avatar">
+            <img src="{% gravatar_for_email 'jesus.anaya.dev@gmail.com' 55 %}" alt="">{{comment.name}}
+        </div>
+        <div class="arrow"></div>
+        <p>
+            {{ comment.comment|comment_filter }}
+            <a class="reply" href="#">Reply</a>
+        </p>
+    </li>
+{% endfor %}
+</ul>

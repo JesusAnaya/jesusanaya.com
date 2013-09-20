@@ -1,0 +1,39 @@
+{% load inlinetrans mezzanine_tags comment_tags %}
+
+{% comment_thread object_for_comments %}
+
+<!-- Comments FORM start -->
+<h3 class="lac">Leave a comment</h3>
+<div class="form">
+    <form method="post" id="comment" action="{{ comment_url }}#comment">{% csrf_token %}
+        <div style="visubility:hidden;display:none">
+        {% with posted_comment_form as form %}
+        {{ form.content_type }}
+        {{ form.object_pk }}<br />
+        {{ form.timestamp }}<br />
+        {{ form.security_hash }}<br />
+        </div>
+        <div class="description">
+            <input type="text" name="name" placeholder="Your name here..." />
+         </div>
+         <div class="description">
+            <input type="text" name="email" placeholder="Your Email here..." />
+         </div>
+          <div class="description">
+            <input type="text" name="url" placeholder="Your Website URL here..." />
+         </div>
+         <div class="description">
+            <textarea name="comment" placeholder="What can we do for you?" style="width:90%;height:110px"></textarea>
+        </div>
+        <div style="visubility:hidden;display:none">
+        {{ form.honeypot }}
+        </div>
+
+        {% endwith %}
+
+        <div class="button">
+            <input type="submit" value="SUBMIT" />
+        </div>
+    </form>
+</div>
+<!-- Comments FORM END -->

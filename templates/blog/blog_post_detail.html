@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load staticfiles anaya_tags inlinetrans %}
+{% load mezzanine_tags comment_tags blog_tags keyword_tags %}
+
+{% block meta_title %}{{ blog_post.meta_title }}{% endblock %}
+
+{% block meta_keywords %}{% metablock %}
+    {% keywords_for page as keywords %}
+        {% for keyword in keywords %}
+            {% if not forloop.first %}, {% endif %}
+            {{ keyword }}
+        {% endfor %}
+    {% endmetablock %}
+{% endblock %}
+
+{% block meta_description %}
+    {% metablock %}
+        {{ page.description }}
+    {% endmetablock %}
+{% endblock %}
+
+{% block title %}
+    {% if page %}
+        {% editable page.title %}{{ page.title }}{% endeditable %}
+    {% else %}
+        {% itrans "Blog" %}
+    {% endif %}
+{% endblock %}
+
+{% block extra_js %}
+<script type="text/javascript" src="{% static 'js/jquery.tinyscrollbar.min.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container blog">
+    <div class="row">
+        <div class="span12">
+            <div class="row">
+                {% render_header 'blog' %}
+
+                <!-- The first block - Top left -->
+                <div class="span6 offset3 content">
+                    <!-- Scrollable content -->
+                    <div id="loop">
+                         <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+                        <div class="viewport">
+                            <div class="overview">
+                                <!-- Post start -->
+                                <h2><a href="">{{blog_post.title}}</a></h2>
+                                <div class="subtitle">
+                                    <div class="date">Date:&nbsp;
+                                            <a href="">{{ blog_post.publish_date|date:"M d, Y" }}</a>
+                                        </div>
+                                        <div class="user">Posted by: <a rel="author" href="https://plus.google.com/110417611079207314556?rel=author" target="_blank">{{blog_post.user.username}}</a> </div>
+
+                                        {% with blog_post.categories.all.0 as category%}
+                                        <div class="category">Posted in: <a href="{{ category.get_absolute_url }}">{{category}}</a> </div>
+                                        {% endwith %}
+                                </div>
+                                <p>{{ blog_post.content|richtext_filters|safe }}</p>
+                                <div class="the_comments">
+                                    <div class="block">
+                                        {% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

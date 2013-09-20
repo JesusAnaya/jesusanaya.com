@@ -271,7 +271,7 @@ INSTALLED_APPS = (
     #"mezzanine.mobile",
     "website",
     "gravatar",
-    "inlinetrans",
+    "inlinetrans"
 )
 
 # List of processors used by RequestContext to populate the context.
@@ -344,6 +344,11 @@ try:
 except ImportError:
     pass
 
+RICHTEXT_ALLOWED_ATTRIBUTES = True
+RICHTEXT_ALLOWED_STYLES = True
+RICHTEXT_ALLOWED_TAGS = True
+#TINYMCE_SETUP_JS = "js/tinymceconfig.js"
+RICHTEXT_WIDGET_CLASS = 'website.forms.TinyMceWidget'
 
 ####################
 # DYNAMIC SETTINGS #
