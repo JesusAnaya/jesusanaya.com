@@ -1,0 +1,9 @@
+<!-- Navigation Start -->
+<div class="navigation">
+    <div class="links">
+        {% for page in current_page.visible_page_range %}
+        <a href="?{{ page_var }}={{ page }}{% if querystring %}&{{ querystring }}{% endif %}" {% if page == current_page.number %}class="selected"{% endif %}>{{ page }}</a>
+        {% endfor %}
+    </div>
+</div>
+<!-- Navigation END -->

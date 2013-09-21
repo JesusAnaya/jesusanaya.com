@@ -73,24 +73,11 @@
                                     </p>
                                     <div class="extra">
                                         <a href="{{ blog_post.get_absolute_url }}" class="more">{% itrans 'Read more ...' %}</a>
-                                        <a href="{{ blog_post.get_absolute_url }}" class="comments"><span>12</span> {% itrans 'Comments' %}</a>
                                     </div>
                                     <!-- Post End -->
                                     {% endfor %}
 
-                                    <!-- Navigation Start -->
-                                    <div class="navigation">
-                                        <div class="links">
-                                            <a href="#" class="selected">1</a>
-                                            <a href="#">2</a>
-                                            <a href="#">3</a>
-                                            <a href="#">4</a>
-                                            <a href="#">5</a>
-                                            <a href="#">6</a>
-                                        </div>
-                                        <div class="status">Page 1 of 6</div>
-                                    </div>
-                                    <!-- Navigation END -->
+                                    {% pagination_for blog_posts %}
                                 </div>
                             </div>
                     </div>

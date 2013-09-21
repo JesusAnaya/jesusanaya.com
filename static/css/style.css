@@ -307,6 +307,11 @@ p.description textarea{width: 214px;height: 141px;resize:none;border: 1px solid 
 /* Bottom Retina fixes end */
 body .container .span12 .row .no-bg{background: none;}
 
+.addthis_toolbox.addthis_default_style {
+    width: 100%;
+    text-align: center;
+}
+
 /* ************************* Media Queries Start ************************* */
 
 /* 1200px container width Start */
