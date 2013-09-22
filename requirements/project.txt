@@ -5,3 +5,5 @@ south==0.8
 django-grappelli==2.4.6
 django-gravatar
 django-inlinetrans
+selenium
+factory_boy
